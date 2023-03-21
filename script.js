@@ -9,9 +9,11 @@ ball.addEventListener("click", ()=>{
 
 let face = document.getElementById("face");
 let value = "";
+let display = "";
 let current = "";
-
-console.log(Array.from(document.getElementsByClassName("key")))
+let sign = null;
+let numLock = false;
+let intial = true;
 
 Array.from(document.getElementsByClassName("key")).forEach((i)=>{
     i.addEventListener("click",(e)=>{
@@ -21,19 +23,32 @@ Array.from(document.getElementsByClassName("key")).forEach((i)=>{
 
 function handleInput(a){
     switch(a){
+        case "+":
+            value = +value + +current;
+            intial?current = "":current = value;
+            sign = "+";
+            break;
+
+        case "=":
+            sign==="+"?value = +value + +current:value = value;
+            current = value;
+            render();
+            break;
+
         case "DEL":
-            value = [...value].splice(0,value.length-1).join("");
+            current = [...current].splice(0,current.length-1).join("");
+            render();
             break;
 
         default:
-            value+=a;
+            current+=a;
+            render();
             break;
 
     }
-    
-    render();
 }
 
 function render(){
-    face.innerText = value;
+    display = current;
+    face.innerText = display;
 }
