@@ -16,11 +16,12 @@ html,body{
 }
 
 body{
-    background-color: #e6e6e6;
+    background-color: #3b4664;
     color: #35352e;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 
@@ -79,14 +80,14 @@ body{
 .themeSelector--input{
     width: 70px;
     height: 25px;
-    background-color: #d3cdcd;
+    background-color: #252c46;
     border-radius: 20px;
 }
 
 .themeSelector--ball{
     height: calc(100% - 8px);
     aspect-ratio: 1/1;
-    background-color: #ff8b38;
+    background-color: #e16a62;
     border-radius: 50%;
     position: relative;
     top: 50%;
@@ -123,7 +124,7 @@ body{
 
 .calculator--face{
     width: 100%;
-    background-color: #eeeeee;
+    background-color: #181f32;
     font-size: 3rem;
     font-weight: bold;
     text-align: right;
@@ -132,7 +133,7 @@ body{
 }
 
 .calculator--keypad{
-    background-color: #d3cdcd;
+    background-color: #252d44;
     padding: 30px;
     margin-top: 10px;
     display: grid;
@@ -154,6 +155,7 @@ body{
     box-shadow: 0px 3px 1px 0px rgba(128, 128, 128, 0.685);
     cursor: pointer;
     user-select: none;
+    color: #5b5d66;
 }
 
 .key:hover{

@@ -3,7 +3,6 @@ let ballState = "1";
 
 ball.addEventListener("click", ()=>{
     ball.className = "themeSelector--ball";
-    console.log(ballState)
     ballState==="1"?(ball.classList.add("middle"), ballState = "2"):(ballState==="2")?(ball.classList.add("rightward"), ballState = "3"):(ball.classList.add("leftward"), ballState = "1");
 })
 
@@ -20,7 +19,7 @@ Array.from(document.getElementsByClassName("key")).forEach((i)=>{
         handleInput(e.target.innerText);
     })
 })
-
+/*REDO IN REACT*/ 
 function handleInput(a){
     switch(a){
         case "+":
