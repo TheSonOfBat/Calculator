@@ -40,8 +40,8 @@ export default function Calculator(props){
                                 <div onMouseEnter={props.hoverEnter} onMouseLeave={props.hoverLeave} style={props.themeObj[props.position]['key']} onClick={props.onClick} className="key">/</div>
                                 <div onMouseEnter={props.hoverEnter} onMouseLeave={props.hoverLeave} style={props.themeObj[props.position]['key']} onClick={props.onClick} className="key">x</div>
                             </div>
-                            <div className="key">RESET</div>
-                            <div className="key">=</div>
+                            <div onClick={props.onClick} className="key">RESET</div>
+                            <div onClick={props.onClick} className="key">=</div>
                         </div>
                 </div>
         </div>

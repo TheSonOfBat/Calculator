@@ -5,6 +5,7 @@ import Calculator from './Calculator';
 function App() {
   let [face, updateFace] = React.useState("");
   let [position, updatePosition] = React.useState("1");
+  let total = React.useRef(0);
 
   let themeObj = {
     "1":{
@@ -36,7 +37,26 @@ function App() {
 }
 
   function keyPress(key){
-    updateFace((prev)=>prev+key)
+    if(!+key){
+      if(key==="DEL"){
+        updateFace((prev)=>[...prev].splice(0, prev.length-1).join(""))
+      }
+
+      if(key==="+"){
+        total.current = +face;
+        updateFace("")
+      }
+
+      if(key==="="){
+        console.log(total.current)
+        total.current += +face;
+        updateFace(total.current);
+      }
+    }
+    else{
+      updateFace((prev)=>prev+key)
+    }
+    
   }
 
   function handleToggle(){
