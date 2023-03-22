@@ -6,6 +6,7 @@ function App() {
   let [face, updateFace] = React.useState("");
   let [position, updatePosition] = React.useState("1");
   let total = React.useRef(0);
+  let currentOperator = React.useRef(null);
 
   let themeObj = {
     "1":{
@@ -14,7 +15,9 @@ function App() {
         calculatorFace: {backgroundColor: '#181f32'},
         calculatorKeypad: {backgroundColor: '#252d44'},
         key: {backgroundColor: '#e5e4e0', color: '#5b5d66'},
-        keyHover: {backgroundColor: 'white'}
+        keyHover: {backgroundColor: 'white'},
+        alterKey: {backgroundColor: '#a2b3e1'},
+        equalKey: {backgroundColor: '#e16a62'}
     },
 
     "2":{
@@ -23,7 +26,9 @@ function App() {
         calculatorFace: {backgroundColor: '#eeeeee'},
         calculatorKeypad: {backgroundColor: '#d3cdcd'},
         key: {backgroundColor: '#e5e4e0', color: '#5b5d66'},
-        keyHover: {backgroundColor: 'white'}
+        keyHover: {backgroundColor: 'white'},
+        alterKey: {backgroundColor: '##62b5bd'},
+        equalKey: {backgroundColor: '#f88b3e', color: 'white'}
     },
     
     "3":{
@@ -32,25 +37,52 @@ function App() {
         calculatorFace: {backgroundColor: '#1e0836'},
         calculatorKeypad: {backgroundColor: '#1e0836'},
         key: {backgroundColor: '#331b4d', color: '#ffe53b'},
-        keyHover: {backgroundColor: '#2e104f'}
+        keyHover: {backgroundColor: '#2e104f'},
+        alterKey: {backgroundColor: '#8731b0'},
+        equalKey: {backgroundColor: '#92fff9', color: '#0d262a'}
     }
 }
 
   function keyPress(key){
     if(!+key){
-      if(key==="DEL"){
-        updateFace((prev)=>[...prev].splice(0, prev.length-1).join(""))
+      console.log(key === currentOperator.current)
+      if(key === currentOperator.current){
+        key = "=";
       }
+      else{
+        if(key==="DEL"){
+          updateFace((prev)=>[...prev].splice(0, prev.length-1).join(""))
+        }
 
-      if(key==="+"){
-        total.current = +face;
-        updateFace("")
+        else if(key === "="){
+          key = "=";
+        }
+  
+        else{
+          currentOperator.current = key;
+          total.current = +face;
+          updateFace("");
+        }
       }
 
       if(key==="="){
-        console.log(total.current)
-        total.current += +face;
-        updateFace(total.current);
+        console.log(currentOperator.current)
+        switch(currentOperator.current){
+          case "+":
+            total.current += +face;
+            break;
+          case "-":
+            total.current -= +face;
+            break;
+          case "x":
+            total.current *= +face;
+            break;
+          case "/":
+            total.current /= +face;
+            break;
+        }
+        updateFace(total.current.toString());
+        currentOperator.current = "=";
       }
     }
     else{
