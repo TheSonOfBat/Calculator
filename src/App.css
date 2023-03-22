@@ -24,7 +24,6 @@ html,body,#root{
 }
 
 .calculator--container{
-  width: min(80%, 500px);
   height: auto;
   display: flex;
   align-items: center;

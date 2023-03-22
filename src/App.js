@@ -3,10 +3,11 @@ import './App.css';
 import Calculator from './Calculator';
 
 function App() {
-  let [face, updateFace] = React.useState("");
+  let [face, updateFace] = React.useState("0");
   let [position, updatePosition] = React.useState("1");
   let total = React.useRef(0);
   let currentOperator = React.useRef(null);
+  let passThrough = React.useRef(false);
 
   let themeObj = {
     "1":{
@@ -44,51 +45,50 @@ function App() {
 }
 
   function keyPress(key){
-    if(!+key){
-      console.log(key === currentOperator.current)
-      if(key === currentOperator.current){
-        key = "=";
+      if([...new Array(10).keys()].includes(+key)){
+        passThrough.current?updateFace((prev)=>prev+key):updateFace(key);
+        passThrough.current = true;
       }
+      
       else{
-        if(key==="DEL"){
-          updateFace((prev)=>[...prev].splice(0, prev.length-1).join(""))
-        }
-
-        else if(key === "="){
-          key = "=";
-        }
-  
-        else{
-          currentOperator.current = key;
-          total.current = +face;
-          updateFace("");
+        switch(key){
+          case "DEL":
+            updateFace((prev)=>[...prev].splice(0, prev.length-1).join(""));
+            break;
+          
+          case "RESET":
+            updateFace("0");
+            total.current = 0;
+            break;
+          
+          case "=":
+            if(currentOperator.current){
+              switch(currentOperator.current){
+                case "+":
+                  total.current+= +face;
+                  break;
+                case "-":
+                  total.current-= +face;
+                  break;
+                case "x":
+                  total.current*= +face;
+                  break;
+                case "/":
+                  total.current/= +face;
+                  break;
+              }
+              updateFace(total.current.toString());
+              currentOperator.current = false;
+            }
+            break;
+            
+          default:
+            currentOperator.current = key;
+            total.current = +face;
+            passThrough.current = false;
+            break;
         }
       }
-
-      if(key==="="){
-        console.log(currentOperator.current)
-        switch(currentOperator.current){
-          case "+":
-            total.current += +face;
-            break;
-          case "-":
-            total.current -= +face;
-            break;
-          case "x":
-            total.current *= +face;
-            break;
-          case "/":
-            total.current /= +face;
-            break;
-        }
-        updateFace(total.current.toString());
-        currentOperator.current = "=";
-      }
-    }
-    else{
-      updateFace((prev)=>prev+key)
-    }
-    
   }
 
   function handleToggle(){
@@ -104,7 +104,7 @@ function App() {
   }
 
   return (
-    <Calculator themeObj={themeObj} face={face} onClick={(e)=>keyPress(e.target.innerText)} position={position} togglePosition={handleToggle} hoverEnter={(e)=>handleKeyEnter(e.target)} hoverLeave={(e)=>handleKeyLeave(e.target)}/>
+    <Calculator themeObj={themeObj} face={Math.round(face*1000000)/1000000} onClick={(e)=>keyPress(e.target.innerText)} position={position} togglePosition={handleToggle} hoverEnter={(e)=>handleKeyEnter(e.target)} hoverLeave={(e)=>handleKeyLeave(e.target)}/>
   );
 }
 
