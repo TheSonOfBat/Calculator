@@ -6,7 +6,7 @@ Vanilla JavaScript (Calculator functionality), React (Changing of styling and co
 Utilizes JS to mimic functionality of a Calculator and basic arithmetic, uses React to monitor the changes in the user input and renders the current value of the input alongside retaining the data relative to the currently selected operation as well as being utilized to provide a modular and maintainable approach to altering the CSS styling between theme changes. 
 
 ## Final Comparison
-Below are the side-by-side images between the design specifications and my final product. With the only real difference lies in the box shadow of the keys on the keypad. This difference is present as the alternative box shadow color provided a more uniform and accessible design.
+Below are the side-by-side images between the design specifications and my final product. With the only real difference lies in the box shadow of the keys on the keypad. This difference is present as my alternative box shadow color provided a more uniform and accessible design.
 
 ![active-states-theme-3](https://user-images.githubusercontent.com/62327154/226855749-3d652a2c-5d14-4aaf-9f38-12f364a0e936.jpg)
 ![1](https://user-images.githubusercontent.com/62327154/226859088-b97b3380-af34-4ece-a7d1-84ccee95c83a.PNG)
