@@ -13,5 +13,5 @@ Below are the side-by-side images between the design specifications and my final
 ![active-states-theme-1](https://user-images.githubusercontent.com/62327154/226855768-2b7bf697-d227-4b19-92f3-fb46545a9877.jpg)
 ![3](https://user-images.githubusercontent.com/62327154/226855776-975e77b2-7db0-44b3-8ff6-35559283a31d.PNG)
 ![active-states-theme-2](https://user-images.githubusercontent.com/62327154/226855777-266fa1b6-9efd-4264-bd34-409794a2973b.jpg)
-![2](https://user-images.githubusercontent.com/62327154/226855780-2d60f0e9-a297-4ae3-b7c9-fa43108605ff.PNG)
+![2](https://user-images.githubusercontent.com/62327154/226857837-1c37e65f-80df-4aca-a75c-a74084e8e3ac.PNG)
 
