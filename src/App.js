@@ -28,7 +28,7 @@ function App() {
         calculatorKeypad: {backgroundColor: '#d3cdcd'},
         key: {backgroundColor: '#e5e4e0', color: '#5b5d66'},
         keyHover: {backgroundColor: 'white'},
-        alterKey: {backgroundColor: '##62b5bd'},
+        alterKey: {backgroundColor: '#62b5bd', color: 'white'},
         equalKey: {backgroundColor: '#f88b3e', color: 'white'}
     },
     
@@ -39,7 +39,7 @@ function App() {
         calculatorKeypad: {backgroundColor: '#1e0836'},
         key: {backgroundColor: '#331b4d', color: '#ffe53b'},
         keyHover: {backgroundColor: '#2e104f'},
-        alterKey: {backgroundColor: '#8731b0'},
+        alterKey: {backgroundColor: '#8731b0', color: 'white'},
         equalKey: {backgroundColor: '#92fff9', color: '#0d262a'}
     }
 }
