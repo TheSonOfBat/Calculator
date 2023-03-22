@@ -23,7 +23,6 @@ html,body,#root{
   align-items: center;
 }
 
-
 .calculator--container{
   width: min(80%, 500px);
   height: auto;
