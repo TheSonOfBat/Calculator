@@ -9,9 +9,9 @@ Utilizes JS to mimic functionality of a Calculator and basic arithmetic, uses Re
 Below are the side-by-side images between the design specifications and my final product. With the only real difference lies in the box shadow of the keys on the keypad. This difference is present as the alternative box shadow color provided a more uniform and accessible design.
 
 ![active-states-theme-3](https://user-images.githubusercontent.com/62327154/226855749-3d652a2c-5d14-4aaf-9f38-12f364a0e936.jpg)
-![1](https://user-images.githubusercontent.com/62327154/226855763-98dc2d95-a190-4b8e-b61c-8891d16fcfa9.PNG)
+![1](https://user-images.githubusercontent.com/62327154/226859088-b97b3380-af34-4ece-a7d1-84ccee95c83a.PNG)
 ![active-states-theme-1](https://user-images.githubusercontent.com/62327154/226855768-2b7bf697-d227-4b19-92f3-fb46545a9877.jpg)
-![3](https://user-images.githubusercontent.com/62327154/226855776-975e77b2-7db0-44b3-8ff6-35559283a31d.PNG)
+![3](https://user-images.githubusercontent.com/62327154/226858854-a4ad2d82-14ef-4ce9-9cd6-d96788d82502.PNG)
 ![active-states-theme-2](https://user-images.githubusercontent.com/62327154/226855777-266fa1b6-9efd-4264-bd34-409794a2973b.jpg)
 ![2](https://user-images.githubusercontent.com/62327154/226857837-1c37e65f-80df-4aca-a75c-a74084e8e3ac.PNG)
 
