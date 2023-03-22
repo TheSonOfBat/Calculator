@@ -12,7 +12,8 @@ function App() {
         themeSelectorInput: {backgroundColor: '#252c46'},
         calculatorFace: {backgroundColor: '#181f32'},
         calculatorKeypad: {backgroundColor: '#252d44'},
-        key: {backgroundColor: '#e5e4e0', color: '#5b5d66'}
+        key: {backgroundColor: '#e5e4e0', color: '#5b5d66'},
+        keyHover: {backgroundColor: 'white'}
     },
 
     "2":{
@@ -20,7 +21,8 @@ function App() {
         themeSelectorInput: {backgroundColor: '#d4cdcd'},
         calculatorFace: {backgroundColor: '#eeeeee'},
         calculatorKeypad: {backgroundColor: '#d3cdcd'},
-        key: {backgroundColor: '#e5e4e0', color: '#5b5d66'}
+        key: {backgroundColor: '#e5e4e0', color: '#5b5d66'},
+        keyHover: {backgroundColor: 'white'}
     },
     
     "3":{
@@ -28,7 +30,8 @@ function App() {
         themeSelectorInput: {backgroundColor: '#1e0837'},
         calculatorFace: {backgroundColor: '#1e0836'},
         calculatorKeypad: {backgroundColor: '#1e0836'},
-        key: {backgroundColor: '#331b4d', color: '#ffe53b'}
+        key: {backgroundColor: '#331b4d', color: '#ffe53b'},
+        keyHover: {backgroundColor: '#2e104f'}
     }
 }
 
@@ -41,7 +44,7 @@ function App() {
   }
 
   function handleKeyEnter(key){
-    key.style.backgroundColor = "white";
+    key.style.backgroundColor = themeObj[position]['keyHover'].backgroundColor;
   }
 
   function handleKeyLeave(key){
