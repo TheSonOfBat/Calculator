@@ -1,3 +1,5 @@
+![tech](https://user-images.githubusercontent.com/62327154/227070347-f353283c-c245-4cb9-a561-8837e4b1103c.png)
+
 # Calculator Design Project
 Project from www.frontendmentor.io which provided the design specifications and basic graphics to showcase the desired final product. The project was created with create-react-app and has not been built for production for simplicity's sake.
 ## Technologies
