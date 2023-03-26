@@ -1,7 +1,7 @@
 ![tech](https://user-images.githubusercontent.com/62327154/227070347-f353283c-c245-4cb9-a561-8837e4b1103c.png)
 
 # Calculator Design Project
-Project from www.frontendmentor.io which provided the design specifications and basic graphics to showcase the desired final product. The project was created with create-react-app and has not been built for production for simplicity's sake.
+A project designed to practice Javascript logic in reference to the calcultor's functions alongisde the ability to turn provided designs into an accyrate final product. Project from www.frontendmentor.io which provided the design specifications and basic graphics to showcase the desired final product. The project was created with create-react-app and has not been built for production for simplicity's sake.
 ## Technologies
 JavaScript (Calculator functionality), React (Changing of styling, controlling input and rendering content), CSS and HTML
 ## Functionality
