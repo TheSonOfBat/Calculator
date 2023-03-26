@@ -3,7 +3,7 @@
 # Calculator Design Project
 Project from www.frontendmentor.io which provided the design specifications and basic graphics to showcase the desired final product. The project was created with create-react-app and has not been built for production for simplicity's sake.
 ## Technologies
-JavaScript (Calculator functionality), React (Changing of styling and controlling input and rendering content), CSS and HTML
+JavaScript (Calculator functionality), React (Changing of styling, controlling input and rendering content), CSS and HTML
 ## Functionality
 Utilizes Javascript to mimic functionality of a Calculator and basic arithmetic, uses React to monitor the changes in the user input and renders the current value of the input alongside retaining the data relative to the currently selected operation as well as being utilized to provide a modular and maintainable approach to altering the CSS styling between theme changes. 
 
