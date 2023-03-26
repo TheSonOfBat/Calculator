@@ -1,11 +1,11 @@
 ![tech](https://user-images.githubusercontent.com/62327154/227070347-f353283c-c245-4cb9-a561-8837e4b1103c.png)
 
 # Calculator Design Project
-A project designed to practice Javascript logic in reference to the calcultor's functions alongisde the ability to turn provided designs into an accyrate final product. Project from www.frontendmentor.io which provided the design specifications and basic graphics to showcase the desired final product. The project was created with create-react-app and has not been built for production for simplicity's sake.
+A project designed to practice JavaScript logic in reference to the calculator’s functions alongside the ability to turn provided designs into an accurate final product. Project from www.frontendmentor.io which provided the design specifications and basic graphics to showcase the desired final product. The project was created with create-react-app and has not been built for production for simplicity's sake.
 ## Technologies
 JavaScript (Calculator functionality), React (Changing of styling, controlling input and rendering content), CSS and HTML
 ## Functionality
-Utilizes Javascript to mimic functionality of a Calculator and basic arithmetic, uses React to monitor the changes in the user input and renders the current value of the input alongside retaining the data relative to the currently selected operation as well as being utilized to provide a modular and maintainable approach to altering the CSS styling between theme changes. 
+Utilizes JavaScript to mimic functionality of a Calculator and basic arithmetic, uses React to monitor the changes in the user input and renders the current value of the input alongside retaining the data relative to the currently selected operation as well as being utilized to provide a modular and maintainable approach to altering the CSS styling between theme changes. 
 
 ## Final Comparison
 Below are the side-by-side images between the design specifications and my final product. With the only real difference lies in the box shadow of the keys on the keypad. This difference is present as my alternative box shadow color provided a more uniform and accessible design.
